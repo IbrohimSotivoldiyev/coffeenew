@@ -1,0 +1,240 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Bold.woff2") format("woff2"), url("../fonts/Barlow-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("../fonts/Barlow-Regular.woff2") format("woff2"), url("../fonts/Barlow-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces 9pt Soft";
+  src: url("../fonts/Fraunces9ptSoft-Black.woff2") format("woff2"), url("../fonts/Fraunces9ptSoft-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fefcf7;
+  font-family: "Fraunces";
+  font-family: "Barlow", sans-serif;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  padding: 44px 0 32px 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo-link {
+  display: inline-block;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__item + .navbar__item {
+  margin-left: 33px;
+}
+
+.navbar__link {
+  color: #83888f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0.923px;
+  text-transform: uppercase;
+  transition: color 0.5s linear;
+}
+
+.navbar__link:hover {
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .site-header {
+    padding: 64px 0 112px;
+  }
+  .header__logo-link {
+    margin-right: 48px;
+  }
+  .header__logo-img {
+    width: 128px;
+    height: 32px;
+  }
+}
+@media only screen and (max-width: 562px) {
+  .site-header {
+    padding: 48px 0 80px;
+  }
+  .header__list {
+    display: none;
+  }
+  .header__contact {
+    display: none;
+  }
+  .hamburger-btn {
+    display: block;
+  }
+}
+.hero-wrapper {
+  padding: 15px 0 116px 85px;
+  background-image: url(../../images/bgimage.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.hero {
+  width: 525px;
+  padding-top: 64px;
+}
+
+.hero__title {
+  margin-bottom: 32px;
+  color: #fefcf7;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px;
+}
+
+.hero__text-wrapper {
+  width: 417px;
+  margin-bottom: 56px;
+}
+
+.hero__text {
+  color: #fefcf7;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  opacity: 0.8;
+}
+
+.hero__link {
+  padding: 15px 2px 16px;
+  text-align: center;
+  display: inline-block;
+  width: 217px;
+  border-radius: 6px;
+  background: #0e8784;
+  color: #fefcf7;
+  text-align: center;
+  font-family: Fraunces serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 25px;
+  transition: background-color 0.5s linear;
+}
+
+.hero__link:hover {
+  border-radius: 6px;
+  background: #66d2cf;
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-wrapper {
+    padding: 25px 0 40px 34px;
+  }
+  .hero__title {
+    color: #FEFCF7;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 48px; /* 100% */
+  }
+}
+.collection-content {
+  height: 524.545px;
+  flex-shrink: 0;
+  margin-top: 123px;
+  margin-bottom: 200px;
+  padding: 131px 0px;
+  background-image: url(../../images/bguser.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.collection__list {
+  margin-bottom: 126px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.collection__item {
+  position: relative;
+}
+
+.collection__item + .collection__item {
+  margin-left: 66px;
+}
+
+.collection__item-title {
+  width: 255px;
+  margin-top: 71px;
+  margin-bottom: 24px;
+  color: #333d4b;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.collection__item-text {
+  width: 255px;
+  color: #333d4b;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+@media only screen and (max-width: 900px) {
+  .collection__list {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=main.css.map */
